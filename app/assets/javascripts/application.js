@@ -20,5 +20,14 @@ $(window).ready(function(){
   $('#toggle').click(function() {
    $(this).toggleClass('active');
    $('#overlay').toggleClass('open');
+   if ($('#overlay2').hasClass('open')){
+     $('#overlay2').removeClass('open')
+   }
+  });
+
+  $('#toggle2').click(function() {
+   $(this).toggleClass('active');
+   $('#overlay2').toggleClass('open');
+   $('#overlay').css('opacity', '1');
   });
 })

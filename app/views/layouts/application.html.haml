@@ -16,6 +16,13 @@
     .overlay#overlay
       %nav.overlay-menu
         %ul
-          %li= link_to 'Sign In', new_user_session_path unless user_signed_in?
+          %li#toggle2
+            %a{href: '#'} Sign In
           %li= link_to 'Sign Out', destroy_user_session_path, method: :delete if user_signed_in?
           %li= link_to 'Sign Up', new_user_registration_path unless user_signed_in?
+      .overlay#overlay2
+        %nav.overlay-menu
+          %ul
+            %li
+              =render 'layouts/form'
+              = link_to 'Sign In', new_user_session_path unless user_signed_in?
