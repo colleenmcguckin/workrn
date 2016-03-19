@@ -10,6 +10,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    colors = %w[#ED450C #702583 #14B9E8 #FB226F #E63131 #FFB800 #6FAE26 #FFFFFF]
+    @textcolor = colors.sample
   end
 
   def update

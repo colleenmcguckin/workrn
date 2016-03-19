@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+body{
+  background-color: #292929
+}
+.answer{
+  text-align: center;
+  width: 100%;
+  font-size: 20rem;
+}
