@@ -72,7 +72,6 @@ body {
 h1 {
  position: relative;
  text-align: center;
- font-family: 'Vollkorn', serif;
 }
 
 .button_container {
@@ -164,7 +163,6 @@ h1 {
    top: 50%;
    transform: translateY(-50%);
    font-size: 50px;
-   font-family: 'Vollkorn', serif;
    font-weight: 400;
    text-align: center;
  }
@@ -179,7 +177,7 @@ h1 {
    li {
      display: block;
      height: 25%;
-     height: calc(100% / 4);
+     height: calc(100% / 6);
      min-height: 50px;
      position: relative;
      opacity: 0;
@@ -205,7 +203,7 @@ h1 {
          width: 0%;
          transform: translateX(-50%);
          height: 3px;
-         background: $color-link;
+        //  background: $color-link;
          transition: .35s;
        }
      }
