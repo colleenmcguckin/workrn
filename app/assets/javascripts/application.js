@@ -15,3 +15,10 @@
 //= require turbolinks
 //= require tether.min
 //= require_tree .
+
+$(window).ready(function(){
+  $('#toggle').click(function() {
+   $(this).toggleClass('active');
+   $('#overlay').toggleClass('open');
+  });
+})
