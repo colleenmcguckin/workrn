@@ -21,3 +21,28 @@ body{
   width: 100%;
   font-size: 20rem;
 }
+.time-left{
+  text-align: center;
+  width: 100%;
+  font-size: 2rem;
+  opacity: .5;
+  text-transform: uppercase;
+}
+.motivation{
+  text-align: center;
+  width: 100%;
+  font-size: 3rem;
+  opacity: .6;
+}
+q {
+  text-align: center;
+  width: 100%;
+  font-size: 3rem;
+  quotes: "“" "”" "‘" "’";
+}
+q:before {
+  content: open-quote;
+}
+q:after {
+  content: close-quote;
+}
