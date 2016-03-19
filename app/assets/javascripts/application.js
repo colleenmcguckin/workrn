@@ -23,11 +23,20 @@ $(window).ready(function(){
    if ($('#overlay2').hasClass('open')){
      $('#overlay2').removeClass('open')
    }
+   if ($('#overlay3').hasClass('open')){
+     $('#overlay3').removeClass('open')
+   }
   });
 
   $('#toggle2').click(function() {
    $(this).toggleClass('active');
    $('#overlay2').toggleClass('open');
+   $('#overlay').css('opacity', '1');
+  });
+
+  $('#toggle3').click(function() {
+   $(this).toggleClass('active');
+   $('#overlay3').toggleClass('open');
    $('#overlay').css('opacity', '1');
   });
 })

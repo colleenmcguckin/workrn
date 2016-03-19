@@ -18,11 +18,18 @@
         %ul
           %li#toggle2
             %a{href: '#'} Sign In
+          %li#toggle3
+            %a{href: '#'} Sign Up
           %li= link_to 'Sign Out', destroy_user_session_path, method: :delete if user_signed_in?
-          %li= link_to 'Sign Up', new_user_registration_path unless user_signed_in?
       .overlay#overlay2
         %nav.overlay-menu
           %ul
             %li
-              =render 'layouts/form'
+              =render 'layouts/sign_in'
               = link_to 'Sign In', new_user_session_path unless user_signed_in?
+      .overlay#overlay3
+        %nav.overlay-menu
+          %ul
+            %li
+              =render 'layouts/sign_up'
+              =link_to 'Sign Up', new_user_registration_path unless user_signed_in?
