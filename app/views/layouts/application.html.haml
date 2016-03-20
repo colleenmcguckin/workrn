@@ -25,8 +25,7 @@
         %nav.overlay-menu
           %ul
             %li
-              =render 'layouts/sign_in'
-              = link_to 'Sign In', new_user_session_path unless user_signed_in?
+              =render 'devise/sessions/new'
       .overlay#overlay3
         %nav.overlay-menu
           %ul

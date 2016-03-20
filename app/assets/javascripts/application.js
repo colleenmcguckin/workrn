@@ -32,11 +32,13 @@ $(window).ready(function(){
    $(this).toggleClass('active');
    $('#overlay2').toggleClass('open');
    $('#overlay').css('opacity', '1');
+   $('#overlay3').css('opacity', '0');
   });
 
   $('#toggle3').click(function() {
    $(this).toggleClass('active');
    $('#overlay3').toggleClass('open');
    $('#overlay').css('opacity', '1');
+   $('#overlay2').css('opacity', '0');
   });
 })

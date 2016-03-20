@@ -1,0 +1,7 @@
+#devise_log_in_form
+  .container
+    = simple_form_for(:user, url: session_path(:user)) do |f|
+      .form-inputs
+        = f.input :email, required: false, focus: false, placeholder: 'Email', label: false
+        = f.input :password, required: false, placeholder: 'Password', label: false
+        = f.submit "Sign In", id: "log_in"
