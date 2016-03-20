@@ -17,5 +17,9 @@
             %a{href: '#'}='motivation'
           %li= link_to 'sign out', destroy_user_session_path, :method => :delete
   .col-xs-8
-    #profile_content
-      =render 'users/profile'
+    #content
+      #all_content
+        .content-pane#show_profile
+          =render 'users/profile'
+        .content-pane#edit_profile
+          =render 'devise/registrations/edit'
