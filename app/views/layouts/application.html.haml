@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title Workrn
+    %title DWHTBAWRN?
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
@@ -9,25 +9,7 @@
     %p.notice= notice
     %p.alert= alert
     = yield
-    .button_container#toggle
-      %span.top
-      %span.middle
-      %span.bottom
-    .overlay#overlay
-      %nav.overlay-menu
-        %ul
-          %li#toggle2
-            %a{href: '#'}='sign in' unless user_signed_in?
-          %li#toggle3
-            %a{href: '#'}='sign up' unless user_signed_in?
-          %li= link_to 'sign out', destroy_user_session_path, method: :delete if user_signed_in?
-      .overlay#overlay2
-        %nav.overlay-menu
-          %ul
-            %li
-              =render 'devise/sessions/new'
-      .overlay#overlay3
-        %nav.overlay-menu
-          %ul
-            %li
-              =render 'devise/registrations/new'
+    -if user_signed_in?
+      = render 'layouts/dash'
+    -else
+      = render 'layouts/nav'

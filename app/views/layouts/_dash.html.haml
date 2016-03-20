@@ -1,0 +1,21 @@
+.button_container#toggle
+  %span.top
+  %span.middle
+  %span.bottom
+.row
+  .col-xs-4
+    #overlay.dash
+      %nav
+        %ul
+          %li#toggle2
+            %a{href: '#'}='profile'
+          %li#toggle3
+            %a{href: '#'}='display'
+          %li#toggle3
+            %a{href: '#'}='schedule'
+          %li#toggle3
+            %a{href: '#'}='motivation'
+          %li= link_to 'sign out', destroy_user_session_path, :method => :delete
+  .col-xs-8
+    #profile_content
+      =render 'users/profile'
