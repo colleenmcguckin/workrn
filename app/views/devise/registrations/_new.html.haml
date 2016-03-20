@@ -1,6 +1,6 @@
 #devise_log_in_form
   .container-fluid
-    = simple_form_for(:user, url: registration_path(:user)) do |f|
+    = simple_form_for(:user, url: registration_path(:user), autocomplete: 'off' ) do |f|
       = f.error_notification
       .form-inputs
         .row

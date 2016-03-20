@@ -1,0 +1,2 @@
+class OffDaysController < ApplicationController
+end
