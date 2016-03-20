@@ -30,5 +30,4 @@
         %nav.overlay-menu
           %ul
             %li
-              -# =render 'layouts/sign_up'
-              =link_to 'Sign Up', new_user_registration_path unless user_signed_in?
+              =render 'devise/registrations/new'

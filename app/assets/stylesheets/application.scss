@@ -270,26 +270,36 @@ q:after {
   padding-top: -1rem;
   padding-bottom: -1rem;
 }
+#sign_up{
+  background-color: none;
+  width: auto;
+  color: #fff;
+  font-weight: medium;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: -1rem;
+  padding-bottom: -1rem;
+}
 #devise_log_in_form h1{
   font-size: 4rem;
   text-transform: uppercase;
   color: #fff;
 }
-#devise_log_in_form input{
+#devise_log_in_form input, select, #user_role{
   background: none;
   border: solid .35rem #fff;
   margin: 1rem;
   color: #fff;
   padding-left: 1rem;
 }
-#devise_log_in_form input:focus{
+#devise_log_in_form input:focus, #user_role:focus{
   background: none;
   border: solid .35rem #000;
   margin: 1rem;
   color: #000;
   outline-width: 0;
 }
-#devise_log_in_form input:hover{
+#devise_log_in_form input:hover, #user_role:hover{
   background: none;
   border: solid .35rem #000;
   margin: 1rem;
@@ -301,8 +311,20 @@ q:after {
   margin: 1rem;
   color: #000;
   outline-width: 0;
-  font-size: 3rem;
+  font-size: 2rem;
   border:none;
+  position: relative;
+  text-transform: lowercase;
+  border-radius: 0px;
+}
+#devise_log_in_form select {
+  height: 3rem;
+  vertical-align: top;
+}
+#devise_log_in_form input, select {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 ::-webkit-input-placeholder {
    color: #fff;
@@ -318,4 +340,33 @@ q:after {
 
 :-ms-input-placeholder {
    color: #fff;
+}
+#user_email {
+  width: 96%;
+  margin: auto;
+}
+#user_role{
+  width: 92%;
+  border: 0;
+  outline: solid .35rem #fff;
+  background-color: none;
+  max-height: 3.5rem;
+}
+
+#user_role:hover{
+  width: 92%;
+  border: 0;
+  outline: solid .35rem #000;
+  background-color: none;
+}
+#user_role:focus{
+  width: 92%;
+  border: 0;
+  outline: solid .35rem #000;
+  background-color: none;
+}
+.user_role{
+  padding: .3rem;
+  height: 100%;
+  width: 100%;
 }

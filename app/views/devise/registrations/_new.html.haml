@@ -1,0 +1,26 @@
+#devise_log_in_form
+  .container-fluid
+    = simple_form_for(:user, url: registration_path(:user)) do |f|
+      = f.error_notification
+      .form-inputs
+        .row
+          .col-xs-12
+            = f.input :email, required: true, autofocus: true, label: false, placeholder: 'email'
+
+        .row
+          .col-xs-6
+            = f.input :first_name, required: true, autofocus: true, label: false, placeholder: 'first name'
+          .col-xs-6
+            = f.input :last_name, required: true, autofocus: true, label: false, placeholder: 'last name'
+        .row
+          .col-xs-6
+            = f.input :role, required: true, as: :select, default: 1, collection: ['i am a...','person', 'company'], label: false
+          .col-xs-6
+            = f.input :company_name, label: false, placeholder: 'company name'
+        .row
+          .col-xs-6
+            = f.input :password, label: false, required: true, placeholder: 'password', hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length)
+          .col-xs-6
+            = f.input :password_confirmation, required: true, label: false, placeholder: 'confirm password'
+        .row
+          = f.submit "sign up", id: "sign_up"
