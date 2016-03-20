@@ -2,6 +2,6 @@
   .container
     = simple_form_for(:user, url: session_path(:user)) do |f|
       .form-inputs
-        = f.input :email, required: false, focus: false, placeholder: 'Email', label: false
-        = f.input :password, required: false, placeholder: 'Password', label: false
-        = f.submit "Sign In", id: "log_in"
+        = f.input :email, required: false, focus: false, placeholder: 'email', label: false
+        = f.input :password, required: false, placeholder: 'password', label: false
+        = f.submit "sign in", id: "log_in"
